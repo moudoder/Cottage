@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: url('../fonts/RFDewiExpanded-Regular.woff2') format('woff2'),
+        url('../fonts/RFDewiExpanded-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: url('../fonts/RFDewiExpanded-Light.woff2') format('woff2'),
+        url('../fonts/RFDewiExpanded-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: url('../fonts/RFDewiExpanded-Thin.woff2') format('woff2'),
+        url('../fonts/RFDewiExpanded-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: url('../fonts/RFDewiExpanded-Bold.woff2') format('woff2'),
+        url('../fonts/RFDewiExpanded-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RF Dewi Expanded';
+    src: url('../fonts/RFDewiExpanded-Ultralight.woff2') format('woff2'),
+        url('../fonts/RFDewiExpanded-Ultralight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
