@@ -21,7 +21,14 @@ $(document).ready(function () {
     nextArrow: $('.homes-arrow__next'),
     focusOnSelect: true
    });
-
+  $('.slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+    arrows: false,
+   });
+  
   $('.contacts-block').on('click', function() {
     $(this).toggleClass('contacts-block__active');
   })
