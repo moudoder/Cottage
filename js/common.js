@@ -35,7 +35,7 @@ $(document).ready(function () {
   var h = document.getElementById('hg-wrap').scrollHeight;
   
   let hg_bd = $('.hg-wrap').height();
-  $('body').height(hg_bd)
+  $('body').height(hg_bd);
 
   $(window).scroll(function() {
     let scroll = $(window).scrollTop() + $(window).height();
@@ -62,6 +62,19 @@ $(document).ready(function () {
         }
           
       }
+  });
+
+  var scrollPos = 0;
+  $(window).scroll(function(){
+     var st = $(this).scrollTop();
+     if (st > scrollPos){
+       if (counter == 1) {
+          $('.slider').slick('slickNext');
+        }
+     } else {
+       
+     }
+     scrollPos = st;
   });
 
   $('.slider').on('afterChange', function (event, slick, currentSlide) {
