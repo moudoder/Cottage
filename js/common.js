@@ -9,6 +9,9 @@ $(document).ready(function () {
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
+
+    
+
   $('.homes-slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -29,13 +32,20 @@ $(document).ready(function () {
     arrows: false,
    });
   
+
+  $( "body" ).on( "swipe", swipeHandler );
+
+      
+      function swipeHandler( event ){
+         console.log( event );
+  }
+
   let $element = $('.banking');
   let counter = 0;
 
   var h = document.getElementById('hg-wrap').scrollHeight;
   
-  let hg_bd = $('.hg-wrap').height();
-  $('body').height(hg_bd);
+  
 
   $(window).scroll(function() {
     let scroll = $(window).scrollTop() + $(window).height();
@@ -79,7 +89,20 @@ $(document).ready(function () {
 
   $('.slider').on('afterChange', function (event, slick, currentSlide) {
      if ($('.slider-slide-11').hasClass('slick-current')) {
-      $('body').height('auto');
+      $('body').removeClass('body-over');
      }
   });
+
+  $(document.body).on('touchmove', function() {
+    if (counter == 1) {
+       $('.slider').slick('slickNext');
+       console.log('Движение 4')
+     }
+  }); 
+  $(window).on('scroll', function() {
+    
+  }); 
 })
+
+
+
