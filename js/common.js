@@ -40,7 +40,7 @@ $(document).ready(function () {
          console.log( event );
   }
 
-  let $element = $('.banking');
+  let $element = $('.slider');
   let counter = 0;
 
   var h = document.getElementById('hg-wrap').scrollHeight;
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
   $(window).scroll(function() {
     let scroll = $(window).scrollTop() + $(window).height();
-    let offset = $element.offset().top
+    var offset = $element.offset().top + $element.height();
    
     if (scroll > offset && counter == 0) {
       
@@ -62,17 +62,7 @@ $(document).ready(function () {
   })
 
 
-  $(window).bind('mousewheel DOMMouseScroll', function(event){
-      if (event.originalEvent.wheelDelta > 0 || event.originalEvent.detail < 0) {
-          // scroll up
-      }
-      else {
-        if (counter == 1) {
-          $('.slider').slick('slickNext');
-        }
-          
-      }
-  });
+  
 
   var scrollPos = 0;
   $(window).scroll(function(){
