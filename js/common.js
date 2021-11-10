@@ -96,13 +96,27 @@ $(document).ready(function () {
   $(document.body).on('touchmove', function() {
     if (counter == 1) {
        $('.slider').slick('slickNext');
-       console.log('Движение 4')
+       
      }
   }); 
   $(window).on('scroll', function() {
     
   }); 
+
+  $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
+    delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
+    if (delta >= 0) {
+      
+    } else {
+      if (counter == 1) {
+         $('.slider').slick('slickNext');
+         
+       }
+    }
+  });
 })
 
 
 
+
+  
