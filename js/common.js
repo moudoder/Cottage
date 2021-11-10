@@ -83,12 +83,7 @@ $(document).ready(function () {
      }
   });
 
-  $(document.body).on('touchmove', function() {
-    if (counter == 1) {
-       $('.slider').slick('slickNext');
-       
-     }
-  }); 
+  
   $(window).on('scroll', function() {
     
   }); 
