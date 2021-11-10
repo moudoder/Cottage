@@ -83,7 +83,17 @@ $(document).ready(function () {
      }
   });
 
-  
+  let mous_dwn_counter = 0;
+  setInterval(function(){ 
+      mous_dwn_counter = 1;
+  }, 1000);
+
+  $(document.body).on('touchmove', function() {
+    if (counter == 1 && mous_dwn_counter == 1) {
+       $('.slider').slick('slickNext');
+       mous_dwn_counter = 0;
+     }
+  }); 
   $(window).on('scroll', function() {
     
   }); 
@@ -93,9 +103,9 @@ $(document).ready(function () {
     if (delta >= 0) {
       
     } else {
-      if (counter == 1) {
+      if (counter == 1 && mous_dwn_counter == 1) {
          $('.slider').slick('slickNext');
-         
+         mous_dwn_counter = 0;
        }
     }
   });
