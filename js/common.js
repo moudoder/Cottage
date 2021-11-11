@@ -1,6 +1,6 @@
 $(document).ready(function () {
   new WOW().init();
-  
+  alert(10)
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
     $('.modal-menu').removeClass('modal-menu-active');
@@ -54,14 +54,17 @@ $(document).ready(function () {
    
     if (scroll > offset && counter == 0) {
       $('html').addClass('html-over_2');
-      counter = 1;
+      waitPeriod = 500;// waiting time
+          setTimeout(function() {
+            counter = 1;
+          }, waitPeriod);
     }
   });
 
   $('.contacts-block').on('click', function() {
     $(this).toggleClass('contacts-block__active');
   })
-
+ let scrl_tr = 0;
 
   
 
@@ -69,7 +72,7 @@ $(document).ready(function () {
   $(window).scroll(function(){
      var st = $(this).scrollTop();
      if (st > scrollPos){
-       if (counter == 1) {
+       if (counter == 1 && scrl_tr == 0) {
           $('.slider').slick('slickNext');
         }
      } else {
@@ -77,11 +80,12 @@ $(document).ready(function () {
      }
      scrollPos = st;
   });
-
+  
   $('.slider').on('afterChange', function (event, slick, currentSlide) {
      if ($('.slider-slide-11').hasClass('slick-current')) {
       $('body').removeClass('body-over');
       $('html').removeClass('html-over_2');
+      scrl_tr = 1;
      }
 
   });
@@ -91,7 +95,7 @@ $(document).ready(function () {
       mous_dwn_counter = 1;
   }, 500);
 
-  alert('4')
+  
   
   $(window).on('scroll', function() {
     
@@ -109,13 +113,13 @@ $(document).ready(function () {
       e.preventDefault(); // disable the actual scrolling
 
       if (e.deltaY > 10) {
-        if (counter == 1 && mous_dwn_counter == 1) {
+        if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
            $('.slider').slick('slickNext');
            mous_dwn_counter = 0;
          }
       }
       if (e.deltaY < 0) {
-        if (counter == 1 && mous_dwn_counter == 1) {
+        if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
            $('.slider').slick('slickPrev');
            mous_dwn_counter = 0;
          }
