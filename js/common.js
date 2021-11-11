@@ -94,31 +94,19 @@ $(document).ready(function () {
     
   }); 
 
-  var touchPos;
+  function doScroll(e) {
+      // positive deltas are top and left
+      // down and right are negative
 
-  // store the touching position at the start of each touch
-  document.body.ontouchstart = function(e){
-      touchPos = e.changedTouches[0].clientY;
+      // horizontal offset    e.deltaX
+      // vertical offset      e.deltaY
+
+      console.log(`x:${e.deltaX} y:${e.deltaY}`);
+
+      e.preventDefault(); // disable the actual scrolling
   }
 
-  // detect wether the "old" touchPos is 
-  // greater or smaller than the newTouchPos
-  document.body.ontouchmove = function(e){
-      let newTouchPos = e.changedTouches[0].clientY;
-      if(newTouchPos > touchPos) {
-          
-      }
-      if(newTouchPos < touchPos) {
-        let ras_per = touchPos - newTouchPos;
-        console.log(ras_per)
-        if (ras_per > 100 &&  counter == 1 && mous_dwn_counter == 1) {
-          $('.slider').slick('slickNext');
-          mous_dwn_counter = 0;
-        }
-        
-        console.log("finger moving up");
-      }
-  }
+  window.addEventListener("wheel", doScroll, false);
 
 
   $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
