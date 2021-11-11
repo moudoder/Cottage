@@ -1,6 +1,6 @@
 $(document).ready(function () {
   new WOW().init();
-  alert(10)
+  
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
     $('.modal-menu').removeClass('modal-menu-active');
@@ -31,6 +31,7 @@ $(document).ready(function () {
     slidesToScroll: 1,
     swipe: true,
     arrows: false,
+    vertical: true,
    });
   
 
