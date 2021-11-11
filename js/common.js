@@ -109,17 +109,7 @@ $(document).ready(function () {
   window.addEventListener("wheel", doScroll, false);
 
 
-  $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
-    delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
-    if (delta >= 0) {
-      
-    } else {
-      if (counter == 1 && mous_dwn_counter == 1) {
-         $('.slider').slick('slickNext');
-         mous_dwn_counter = 0;
-       }
-    }
-  });
+  
 })
 
 
