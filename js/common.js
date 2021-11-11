@@ -93,7 +93,7 @@ $(document).ready(function () {
   $(window).on('scroll', function() {
     
   }); 
-
+  alert('1')
   function doScroll(e) {
       // positive deltas are top and left
       // down and right are negative
@@ -104,6 +104,11 @@ $(document).ready(function () {
       console.log(`x:${e.deltaX} y:${e.deltaY}`);
 
       e.preventDefault(); // disable the actual scrolling
+
+      if (e.deltaY > 10) {
+        console.log('Скролл вниз фиксид')
+      }
+
   }
 
   window.addEventListener("wheel", doScroll, false);
