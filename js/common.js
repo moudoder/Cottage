@@ -93,7 +93,7 @@ $(document).ready(function () {
   $(window).on('scroll', function() {
     
   }); 
-  alert('1')
+  
   function doScroll(e) {
       // positive deltas are top and left
       // down and right are negative
@@ -106,14 +106,17 @@ $(document).ready(function () {
       e.preventDefault(); // disable the actual scrolling
 
       if (e.deltaY > 10) {
-        console.log('Скролл вниз фиксид')
+        if (counter == 1 && mous_dwn_counter == 1) {
+           $('.slider').slick('slickNext');
+           mous_dwn_counter = 0;
+         }
       }
 
   }
 
   window.addEventListener("wheel", doScroll, false);
 
-
+  alert('2')
   
 })
 
