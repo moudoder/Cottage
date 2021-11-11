@@ -10,7 +10,8 @@ $(document).ready(function () {
   });
 
 
-    
+  
+
 
   $('.homes-slider').slick({
     infinite: true,
@@ -88,15 +89,37 @@ $(document).ready(function () {
       mous_dwn_counter = 1;
   }, 1000);
 
-  $(document.body).on('touchmove', function() {
-    if (counter == 1 && mous_dwn_counter == 1) {
-       $('.slider').slick('slickNext');
-       mous_dwn_counter = 0;
-     }
-  }); 
+  
   $(window).on('scroll', function() {
     
   }); 
+
+  var touchPos;
+
+  // store the touching position at the start of each touch
+  document.body.ontouchstart = function(e){
+      touchPos = e.changedTouches[0].clientY;
+  }
+
+  // detect wether the "old" touchPos is 
+  // greater or smaller than the newTouchPos
+  document.body.ontouchmove = function(e){
+      let newTouchPos = e.changedTouches[0].clientY;
+      if(newTouchPos > touchPos) {
+          
+      }
+      if(newTouchPos < touchPos) {
+        let ras_per = touchPos - newTouchPos;
+        console.log(ras_per)
+        if (ras_per > 100 &&  counter == 1 && mous_dwn_counter == 1) {
+          $('.slider').slick('slickNext');
+          mous_dwn_counter = 0;
+        }
+        
+        console.log("finger moving up");
+      }
+  }
+
 
   $(window).bind('mousewheel DOMMouseScroll MozMousePixelScroll', function(event) {
     delta = parseInt(event.originalEvent.wheelDelta || -event.originalEvent.detail);
