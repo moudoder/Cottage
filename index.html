@@ -14,7 +14,6 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body class="body-over">
-<img src="img/BG.png" alt="" class="body-bg pc-true">
 <img src="img/bg-mob.png" alt="" class="body-bg mob-true">
 <div class="hg-wrap" id="hg-wrap">
 	<header class="header">
@@ -65,12 +64,12 @@
 				</p>
 			</div>
 			<div class="homes-arrows wow fadeInUp">
-				<div class="homes-arrow homes-arrow__prev">
+				<a class="homes-arrow homes-arrow__prev">
 					<img src="img/arrows-left.png" alt="">
-				</div>
-				<div class="homes-arrow homes-arrow__next">
+				</a>
+				<a class="homes-arrow homes-arrow__next">
 					<img src="img/arrows-left.png" alt="">
-				</div>
+				</a>
 			</div>		
 		</div>
 		<div class="homes-slider">
@@ -293,7 +292,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="slider">
+	<section class="slider" id="scroll-to2">
 		<div class="slider-slide slider-slide-1 slider-slide-white">
 			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
 				<div class="header-nav-left">
@@ -360,10 +359,10 @@
 				</div>
 			</div>
 			<div class="container">
-				<h2 class="slider-slide__title">
+				<h2 class="slider-slide__title" style="opacity: 0">
 					СЧАСТЛИВОЕ
 				</h2>
-				<h3 class="slider-slide__subtitle">
+				<h3 class="slider-slide__subtitle" style="opacity: 0">
 					ДЕТСТВО
 				</h3>
 				<a href="#maps" class="scrol-to header-btn btn-opacity wow fadeInUp" data-wow-delay="0.6s">
@@ -746,6 +745,7 @@
 <script src="js/libs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
 <script src="libs/lib/wheel-indicator.js"></script>
+<script src="libs/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 
