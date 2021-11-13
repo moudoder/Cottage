@@ -24,8 +24,8 @@ $(document).ready(function () {
     arrows: true,
     centerMode:true,
     variableWidth: true,
-    prevArrow: $('.homes-arrow__prev'),
-    nextArrow: $('.homes-arrow__next'),
+    prevArrow: $('.hms-arrow__prev'),
+    nextArrow: $('.hms-arrow__next'),
     focusOnSelect: true
    });
   $('.slider').slick({
@@ -37,6 +37,37 @@ $(document).ready(function () {
     vertical: true,
    });
   
+
+  $('.modal-window-slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    swipe: true,
+    arrows: true,
+    prevArrow: $('.modal__arrow_prev'),
+    nextArrow: $('.modal__arrow_next'),
+   
+   });
+
+  $('.modal-window-subslider').slick({
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    swipe: true,
+    arrows: false,
+    asNavFor: '.modal-window-slider',
+    focusOnSelect: true,
+    responsive: [
+        {
+          breakpoint: 720,
+          settings: {
+            slidesToShow: 3,
+          }
+        }
+      ]
+   });
+
+
 
   $( "body" ).on( "swipe", swipeHandler );
 
@@ -166,7 +197,34 @@ $(document).ready(function () {
 
 
 
-  
+  if ($(window).width() < 720) {
+     var touchPos;
+
+     // store the touching position at the start of each touch
+     document.body.ontouchstart = function(e){
+         touchPos = e.changedTouches[0].clientY;
+     }
+
+     // detect wether the "old" touchPos is 
+     // greater or smaller than the newTouchPos
+     document.body.ontouchmove = function(e){
+         let newTouchPos = e.changedTouches[0].clientY;
+         if(newTouchPos > touchPos) {
+             console.log("finger moving down");
+         }
+         if(newTouchPos < touchPos) {
+          let ras_top = touchPos - newTouchPos;
+          if (ras_top > 200) {
+            if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
+               $('.slider').slick('slickNext');
+               mous_dwn_counter = 0;
+             }
+          }
+            
+             
+         }
+     }
+  }
   
 })
 
