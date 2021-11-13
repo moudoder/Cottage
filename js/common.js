@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
 
-  
+  alert('Последнее решение')
 
 
   $('.homes-slider').slick({
