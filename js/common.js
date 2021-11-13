@@ -113,7 +113,7 @@ $(document).ready(function () {
  let scrl_tr = 0;
 
   
-
+ alert('Последняя версия')
   var scrollPos = 0;
   $(window).scroll(function(){
      var st = $(this).scrollTop();
