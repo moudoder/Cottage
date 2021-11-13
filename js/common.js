@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
 
-  alert('Последнее решение 5')
+  
 
 
   $('.homes-slider').slick({
@@ -257,13 +257,13 @@ $(document).ready(function () {
      }
 
      function myfunction(el,d) {
-       if (d == "u") {
+       if (d == "u" && scrl_tr == 0) {
          if (true) {
             $('.slider').slick('slickNext');
             mous_dwn_counter = 0;
           }
        }
-       else{
+       if (d == "d" && scrl_tr == 0) {}{
         if (true) {
            $('.slider').slick('slickPrev');
            mous_dwn_counter2 = 0;
