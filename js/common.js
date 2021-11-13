@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
 
-  alert('Последнее решение 2')
+  alert('Последнее решение 3')
 
 
   $('.homes-slider').slick({
@@ -198,13 +198,13 @@ $(document).ready(function () {
       e.preventDefault(); // disable the actual scrolling
 
       if (e.deltaY > 10) {
-        if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
+        if (true) {
            $('.slider').slick('slickNext');
            mous_dwn_counter = 0;
          }
       }
       if (e.deltaY < -10) {
-        if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
+        if (true) {
            $('.slider').slick('slickPrev');
            mous_dwn_counter2 = 0;
          }
