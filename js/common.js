@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
 
-  alert('Последнее решение')
+  alert('Последнее решение 2')
 
 
   $('.homes-slider').slick({
@@ -215,7 +215,7 @@ $(document).ready(function () {
 
 
 
-  if ($(window).width() < 720) {
+  
      function detectswipe(el,func) {
        swipe_det = new Object();
        swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
@@ -273,7 +273,7 @@ $(document).ready(function () {
 
      detectswipe('scroll-to2',myfunction);
 
-  }
+  
   
 })
 
