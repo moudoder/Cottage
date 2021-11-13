@@ -111,7 +111,7 @@ $(document).ready(function () {
           }, waitPeriod);
     }
   });
-
+  slide_2 = 1;
   $(window).scroll(function() {
     if ($(window).scrollTop() == 0 && slide_2 == 1) {
       counter = 1;
@@ -257,13 +257,13 @@ $(document).ready(function () {
      }
 
      function myfunction(el,d) {
-       if (d == "u" && scrl_tr == 0) {
+       if (d == "u") {
          if (true) {
             $('.slider').slick('slickNext');
             mous_dwn_counter = 0;
           }
        }
-       if (d == "d" && scrl_tr == 0) {}{
+       if (d == "d") {}{
         if (true) {
            $('.slider').slick('slickPrev');
            mous_dwn_counter2 = 0;
