@@ -146,9 +146,10 @@ $(document).ready(function () {
         let of_sl = $(document).height() - $(window).height()
         of_sl = of_sl - 20;
         slide_2 = 0;
+       
         $('html, body').animate({scrollTop: of_sl}, 1);
-
-        
+       
+       
         
        }
     });
