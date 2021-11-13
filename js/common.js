@@ -3,7 +3,7 @@ $(document).ready(function () {
   
 
 
-
+  let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
     $('.modal-menu').removeClass('modal-menu-active');
@@ -102,6 +102,7 @@ $(document).ready(function () {
     var offset = $element.offset().top + $element.height();
    
     if (scroll > offset && counter == 0) {
+      alert(1)
       $('html').addClass('html-over_2');
       waitPeriod = 500;// waiting time
           setTimeout(function() {
@@ -111,7 +112,7 @@ $(document).ready(function () {
           }, waitPeriod);
     }
   });
-  slide_2 = 1;
+  
   $(window).scroll(function() {
     if ($(window).scrollTop() == 0 && slide_2 == 1) {
       counter = 1;
