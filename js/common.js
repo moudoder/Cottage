@@ -13,7 +13,7 @@ $(document).ready(function () {
   });
 
 
-  alert('Последнее решение 3')
+  alert('Последнее решение 5')
 
 
   $('.homes-slider').slick({
@@ -198,13 +198,13 @@ $(document).ready(function () {
       e.preventDefault(); // disable the actual scrolling
 
       if (e.deltaY > 10) {
-        if (true) {
+        if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
            $('.slider').slick('slickNext');
            mous_dwn_counter = 0;
          }
       }
       if (e.deltaY < -10) {
-        if (true) {
+        if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
            $('.slider').slick('slickPrev');
            mous_dwn_counter2 = 0;
          }
@@ -258,13 +258,13 @@ $(document).ready(function () {
 
      function myfunction(el,d) {
        if (d == "u") {
-         if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
+         if (true) {
             $('.slider').slick('slickNext');
             mous_dwn_counter = 0;
           }
        }
        else{
-        if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
+        if (true) {
            $('.slider').slick('slickPrev');
            mous_dwn_counter2 = 0;
          }
