@@ -35,6 +35,14 @@ $(document).ready(function () {
     swipe: true,
     arrows: false,
     vertical: true,
+    responsive: [
+        {
+          breakpoint: 720,
+          settings: {
+            verticalSwiping: true,
+          }
+        }
+      ]
    });
   
 
@@ -113,7 +121,7 @@ $(document).ready(function () {
  let scrl_tr = 0;
 
   
- alert('Последняя версия')
+ 
   var scrollPos = 0;
   $(window).scroll(function(){
      var st = $(this).scrollTop();
@@ -199,32 +207,7 @@ $(document).ready(function () {
 
 
   if ($(window).width() < 720) {
-     var touchPos;
-
-     // store the touching position at the start of each touch
-     document.body.ontouchstart = function(e){
-         touchPos = e.changedTouches[0].clientY;
-     }
-
-     // detect wether the "old" touchPos is 
-     // greater or smaller than the newTouchPos
-     document.body.ontouchmove = function(e){
-         let newTouchPos = e.changedTouches[0].clientY;
-         if(newTouchPos > touchPos) {
-             console.log("finger moving down");
-         }
-         if(newTouchPos < touchPos) {
-          let ras_top = touchPos - newTouchPos;
-          if (ras_top > 200) {
-            if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
-               $('.slider').slick('slickNext');
-               mous_dwn_counter = 0;
-             }
-          }
-            
-             
-         }
-     }
+     
   }
   
 })
