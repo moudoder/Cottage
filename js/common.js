@@ -1,8 +1,8 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert('нормальная версия')
-
+  alert(document.documentElement.clientHeight)
+  alert($(window).height())
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
