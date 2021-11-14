@@ -1,8 +1,8 @@
 $(document).ready(function () {
   new WOW().init();
   
+  alert('y2')
 
-  alert('mozer')
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
@@ -12,12 +12,7 @@ $(document).ready(function () {
     $('body,html').animate({scrollTop: top}, 1500);
   });
 
-  $('#scroll-to2').waypoint(function() {
-    alert('Скол')
-      $(this).css({
-          borderColor: 'blue'
-      });
-  }, { offset: 'bottom-in-view' });
+
   
 
 
@@ -105,7 +100,7 @@ $(document).ready(function () {
   $(window).scroll(function() {
     let scroll = $(window).scrollTop() + $(window).height();
     var offset = $element.offset().top + $element.height();
-    
+    offset = offset - 70;
     if (scroll > offset && counter == 0) {
 
       $('html').addClass('html-over_2');
@@ -281,7 +276,12 @@ $(document).ready(function () {
 
          detectswipe('scroll-to2',myfunction);
   
-  
+  var waypoint = new Waypoint({
+    element: document.getElementById('#scroll-to2'),
+    handler: function(direction) {
+      console.log('Scrolled to waypoint!')
+    }
+  })
 })
 
 
