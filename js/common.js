@@ -1,9 +1,8 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert(document.documentElement.clientHeight)
-  alert($(window).height())
-  let slide_2 = 1;
+
+  
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
     $('.modal-menu').removeClass('modal-menu-active');
@@ -100,7 +99,10 @@ $(document).ready(function () {
   $(window).scroll(function() {
     let scroll = $(window).scrollTop() + $(window).height();
     var offset = $element.offset().top + $element.height();
-    offset = offset - 70;
+    if ($(window).width() < 720) {
+      offset = offset - 70;
+    }
+    
     if (scroll > offset && counter == 0) {
 
       $('html').addClass('html-over_2');
