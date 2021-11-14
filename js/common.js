@@ -104,14 +104,20 @@ $(document).ready(function () {
     }
     
     if (scroll > offset && counter == 0) {
-
-      $('html').addClass('html-over_2');
-      waitPeriod = 500;// waiting time
-          setTimeout(function() {
-            counter = 1;
-            scrl_tr = 0;
-            
-          }, waitPeriod);
+      if ($(window).width() < 720) {
+        counter = 1;
+        scrl_tr = 0;
+      }
+      else{
+        $('html').addClass('html-over_2');
+        waitPeriod = 500;// waiting time
+            setTimeout(function() {
+              counter = 1;
+              scrl_tr = 0;
+              
+            }, waitPeriod);
+      }
+      
     }
   });
   
