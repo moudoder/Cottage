@@ -1,7 +1,7 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert('y')
+  alert('y2')
 
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
@@ -100,7 +100,7 @@ $(document).ready(function () {
   $(window).scroll(function() {
     let scroll = $(window).scrollTop() + $(window).height();
     var offset = $element.offset().top + $element.height();
-    offset = offset - 40;
+    offset = offset - 70;
     if (scroll > offset && counter == 0) {
 
       $('html').addClass('html-over_2');
