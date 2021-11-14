@@ -106,6 +106,7 @@ $(document).ready(function () {
     if (scroll > offset && counter == 0) {
       if ($(window).width() < 720) {
         counter = 1;
+        $('html').addClass('html-over_2');
         scrl_tr = 0;
       }
       else{
