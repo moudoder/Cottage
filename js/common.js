@@ -1,7 +1,7 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert('y212')
+  alert('нормальная версия')
 
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
@@ -152,7 +152,7 @@ $(document).ready(function () {
         $('body').removeClass('body-over');
         $('html').removeClass('html-over_2');
         $('html').addClass('body-top-2');
-        $('html, body').animate({scrollTop: 121},1);
+        $('html, body').animate({scrollTop: 2},1);
         scrl_tr = 1;
         slide_2 = 1;
        }
@@ -164,7 +164,7 @@ $(document).ready(function () {
         counter = 0;
         scrl_tr = 1;
         let of_sl = $(document).height() - $(window).height()
-        of_sl = of_sl - 20;
+        of_sl = of_sl - 65;
         slide_2 = 0;
        
         $('html, body').animate({scrollTop: of_sl}, 1);
