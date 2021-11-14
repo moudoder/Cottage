@@ -1,7 +1,7 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert('x')
+  alert('x2')
 
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
@@ -261,13 +261,13 @@ $(document).ready(function () {
 
          function myfunction(el,d) {
            if (d == "u") {
-             if (true) {
+             if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
                 $('.slider').slick('slickNext');
                 mous_dwn_counter = 0;
               }
            }
            if (d == "d") {}{
-            if (true) {
+            if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
                $('.slider').slick('slickPrev');
                mous_dwn_counter2 = 0;
              }
