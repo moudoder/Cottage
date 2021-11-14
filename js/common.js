@@ -1,7 +1,7 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert('y21')
+  alert('y212')
 
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
@@ -152,7 +152,7 @@ $(document).ready(function () {
         $('body').removeClass('body-over');
         $('html').removeClass('html-over_2');
         $('html').addClass('body-top-2');
-        $('html, body').animate({scrollTop: 61},1);
+        $('html, body').animate({scrollTop: 121},1);
         scrl_tr = 1;
         slide_2 = 1;
        }
