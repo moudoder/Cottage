@@ -1,7 +1,7 @@
 $(document).ready(function () {
   new WOW().init();
   
-  alert('x4')
+  
 
   let slide_2 = 1;
   $(".scrol-to").on("click", function (event) {
