@@ -1,8 +1,20 @@
 $(document).ready(function () {
   new WOW().init();
   
+  
+
+  $('.burger-button').on('click', function() {
+    let parent_burger = $(this).parent('.header-nav-left');
+    $(parent_burger).addClass('header-nav-active');
+  })
+  $('.modal-menu__img').on('click', function() {
+    let parent_burger = $(this).parent('.modal-menu');
+    parent_burger = $(parent_burger).parent('.header-nav-left');
+    $(parent_burger).removeClass('header-nav-active');
+  })
 
   
+
   $(".scrol-to").on("click", function (event) {
     event.preventDefault();
     $('.modal-menu').removeClass('modal-menu-active');
@@ -27,23 +39,71 @@ $(document).ready(function () {
     nextArrow: $('.hms-arrow__next'),
     focusOnSelect: true
    });
-  $('.slider').slick({
+  $('.slider-page').slick({
     infinite: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     swipe: true,
     arrows: false,
     vertical: true,
+    verticalSwiping: true,
+    adaptiveHeight: true,
+    speed: 1000,
+    cssEase: 'ease',
     responsive: [
         {
           breakpoint: 720,
           settings: {
-            verticalSwiping: false,
+            
           }
         }
       ]
    });
-  
+
+  $('.modal-menu__item_1').on('click', function() {
+    $('.slider-page').slick('slickGoTo', 0);
+    return false;
+  })
+  $('.modal-menu__item_2').on('click', function() {
+    $('.slider-page').slick('slickGoTo', 1);
+    return false;
+  })
+  $('.modal-menu__item_3').on('click', function() {
+    $('.slider-page').slick('slickGoTo', 3);
+    return false;
+  })
+  $('.modal-menu__item_4').on('click', function() {
+    $('.slider-page').slick('slickGoTo', 15);
+    return false;
+  })
+  $('.modal-menu__item_5').on('click', function() {
+    $('.slider-page').slick('slickGoTo', 17);
+    return false;
+  })
+  $('.slider-page').on('init', function(e, slick) {
+    var $firstEl = $('.slider_item:first-child').find('[data-animation]');
+    doAnimation($firstEl);    
+  });
+  $('.slider-page').on('beforeChange', function(e, slick, currentSlide, nextSlide) {
+    var $animationEl = $('.slider_item[data-slick-index="' + nextSlide + '"]').find('[data-animation]');
+    doAnimation($animationEl);    
+  });
+
+  function doAnimation(elements) {
+    var animationEndEvents = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    elements.each(function() {
+      var $this = $(this);
+      var $animationDelay = $this.data('delay');
+      var $animationType = 'animated ' + $this.data('animation');
+      $this.css({
+        'animation-delay': $animationDelay,
+        '-webkit-animation-delay': $animationDelay
+      });
+      $this.addClass($animationType).one(animationEndEvents, function() {
+        $this.removeClass($animationType);
+      });
+    });
+  }
 
   $('.modal-window-slider').slick({
     infinite: true,
@@ -53,9 +113,7 @@ $(document).ready(function () {
     arrows: true,
     prevArrow: $('.modal__arrow_prev'),
     nextArrow: $('.modal__arrow_next'),
-   
    });
-
   $('.modal-window-subslider').slick({
     infinite: false,
     slidesToShow: 4,
@@ -73,114 +131,17 @@ $(document).ready(function () {
         }
       ]
    });
-
-
-
-  $( "body" ).on( "swipe", swipeHandler );
-
-      
-      function swipeHandler( event ){
-         if ($('.slider-slide-11').hasClass('slick-current')) {
-          $(".slider").not('.slick-initialized').slick({
-            verticalSwiping: false,
-          })
-          $(".slider").slick('reinit');
-         
-         }
-      }
-
-  let $element = $('.slider');
-  let counter = 0;
-
-  var h = document.getElementById('hg-wrap').scrollHeight;
-  
   
 
-  $(window).scroll(function() {
-    let scroll = $(window).scrollTop() + $(window).height();
-    var offset = $element.offset().top + $element.height();
-    if ($(window).width() < 720) {
-      offset = offset - 70;
-    }
-    
-    if (scroll > offset && counter == 0) {
-      if ($(window).width() < 720) {
-        counter = 1;
-        $('html').addClass('html-over_2');
-        scrl_tr = 0;
-      }
-      else{
-        $('html').addClass('html-over_2');
-        waitPeriod = 500;// waiting time
-            setTimeout(function() {
-              counter = 1;
-              scrl_tr = 0;
-              
-            }, waitPeriod);
-      }
-      
-    }
-  });
+ 
   
-  $(window).scroll(function() {
-    if ($(window).scrollTop() == 0 && slide_2 == 1) {
-      counter = 1;
-      scrl_tr = 0;
-      $('html').addClass('html-over_2');
-    }
-  });
-  
-
   $('.contacts-block').on('click', function() {
     $(this).toggleClass('contacts-block__active');
   })
- let scrl_tr = 0;
 
-  
- 
-  var scrollPos = 0;
-  $(window).scroll(function(){
-     var st = $(this).scrollTop();
-     if (st > scrollPos){
-       if (counter == 1 && scrl_tr == 0) {
-          $('.slider').slick('slickNext');
-        }
-     } else {
-       
-     }
-     scrollPos = st;
-  });
-
-  
-
- 
 
   $('.slider').on('afterChange', function (event, currentSlide) {
-       if ($('.slider-slide-11').hasClass('slick-current')) {
        
-        $('body').removeClass('body-over');
-        $('html').removeClass('html-over_2');
-        $('html').addClass('body-top-2');
-        $('html, body').animate({scrollTop: 2},1);
-        scrl_tr = 1;
-        slide_2 = 1;
-       }
-       if ($('.slider-slide-1').hasClass('slick-current')) {
-        $('html').removeClass('body-top-2');
-        $('html').removeClass('html-over_2');
-        $('body').addClass('body-over');
-        let prt_2 = $(document).height() - $(window).height()
-        counter = 0;
-        scrl_tr = 1;
-        let of_sl = $(document).height() - $(window).height()
-        of_sl = of_sl - 65;
-        slide_2 = 0;
-       
-        $('html, body').animate({scrollTop: of_sl}, 1);
-       
-       
-        
-       }
     });
 
   let mous_dwn_counter = 0;
@@ -198,101 +159,35 @@ $(document).ready(function () {
     
   }); 
   
+  
+
   function doScroll(e) {
-      // positive deltas are top and left
-      // down and right are negative
+        // positive deltas are top and left
+        // down and right are negative
 
-      // horizontal offset    e.deltaX
-      // vertical offset      e.deltaY
+        // horizontal offset    e.deltaX
+        // vertical offset      e.deltaY
 
-      
+        
 
-      e.preventDefault(); // disable the actual scrolling
+        
 
-      if (e.deltaY > 10) {
-        if (counter == 1 && mous_dwn_counter == 1 && scrl_tr == 0) {
-           $('.slider').slick('slickNext');
-           mous_dwn_counter = 0;
-         }
-      }
-      if (e.deltaY < -10) {
-        if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
-           $('.slider').slick('slickPrev');
-           mous_dwn_counter2 = 0;
-         }
-      }
-  }
-
-  window.addEventListener("wheel", doScroll, false);
-
-
-
-  
-    function detectswipe(el,func) {
-           swipe_det = new Object();
-           swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
-           var min_x = 30;  //min x swipe for horizontal swipe
-           var max_x = 30;  //max x difference for vertical swipe
-           var min_y = 10;  //min y swipe for vertical swipe
-           var max_y = 200;  //max y difference for horizontal swipe
-           var direc = "";
-           ele = document.getElementById(el);
-           ele.addEventListener('touchstart',function(e){
-             var t = e.touches[0];
-             swipe_det.sX = t.screenX; 
-             swipe_det.sY = t.screenY;
-           },false);
-           ele.addEventListener('touchmove',function(e){
-             
-             var t = e.touches[0];
-             swipe_det.eX = t.screenX; 
-             swipe_det.eY = t.screenY;    
-           },false);
-           ele.addEventListener('touchend',function(e){
-             //horizontal detection
-             if ((((swipe_det.eX - min_x > swipe_det.sX) || (swipe_det.eX + min_x < swipe_det.sX)) && ((swipe_det.eY < swipe_det.sY + max_y) && (swipe_det.sY > swipe_det.eY - max_y) && (swipe_det.eX > 0)))) {
-               if(swipe_det.eX > swipe_det.sX) direc = "r";
-               else direc = "l";
-             }
-             //vertical detection
-             else if ((((swipe_det.eY - min_y > swipe_det.sY) || (swipe_det.eY + min_y < swipe_det.sY)) && ((swipe_det.eX < swipe_det.sX + max_x) && (swipe_det.sX > swipe_det.eX - max_x) && (swipe_det.eY > 0)))) {
-               if(swipe_det.eY > swipe_det.sY) direc = "d";
-               else direc = "u";
-             }
-
-             if (direc != "") {
-               if(typeof func == 'function') func(el,direc);
-             }
-             direc = "";
-             swipe_det.sX = 0; swipe_det.sY = 0; swipe_det.eX = 0; swipe_det.eY = 0;
-           },false);  
-         }
-
-         function myfunction(el,d) {
-           if (d == "u") {
-             if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
-                $('.slider').slick('slickNext');
-                mous_dwn_counter = 0;
-              }
-           }
-           if (d == "d") {}{
-            if (counter == 1 && mous_dwn_counter2 == 1 && scrl_tr == 0) {
-               $('.slider').slick('slickPrev');
-               mous_dwn_counter2 = 0;
-             }
-           }
-         }
-
-         detectswipe('scroll-to2',myfunction);
-  
-  var waypoint = new Waypoint({
-    element: document.getElementById('#scroll-to2'),
-    handler: function(direction) {
-      console.log('Scrolled to waypoint!')
+        if (e.deltaY > 10) {
+          if (mous_dwn_counter == 1) {
+            $('.slider-page').slick('slickNext');
+            mous_dwn_counter = 0;
+          }
+          
+        }
+        if (e.deltaY < -10) {
+          if (mous_dwn_counter2 == 1) {
+            $('.slider-page').slick('slickPrev');
+            mous_dwn_counter2 = 0;
+          }
+          
+        }
     }
-  })
+
+    window.addEventListener("wheel", doScroll, false);
+
 })
-
-
-
-

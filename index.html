@@ -9,11 +9,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="Favicon.ico">
 	<!-- libs css-->
 	<link rel="stylesheet" href="css/libs.min.css">
-
 	<!-- main css -->
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body class="body-over">
+<body class="">
 
 <div class="dark-window"></div>
 <div class="modal-window">
@@ -62,46 +61,67 @@
 		</div>	
 	</div>
 </div>
-<div class="hg-wrap" id="hg-wrap">
-	<header class="header">
-		<img src="img/header-bg.png" alt="" class="header-bg pc-true">
-		<img src="img/header-bg-mobile (1).png" alt="" class="header-bg mob-true">
-		<nav class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-			<div class="header-nav-left">
-				<img src="img/menu-header.png" alt="">
-				<a href="index.html" class="header-nav__text">
+
+<div class="slider-page">
+	<div class="slider_item header">
+			<img src="img/header-bg.png" alt="" class="header-bg pc-true">
+			<img src="img/header-bg-mobile (1).png" alt="" class="header-bg mob-true">
+			<nav class="header-nav wow fadeInUp" data-wow-delay="0.6s">
+				<div class="header-nav-left">
+					<img src="img/menu-header.png" alt="" class="burger-button">
+					<a href="index.html" class="header-nav__text">
+						LEVEL-HOUSE
+					</a>
+					<div class="modal-menu">
+						<img src="img/close-modal.png" alt="" class="modal-menu__img">
+						<ul class="modal-menu__list">
+							<li class="modal-menu__item">
+								<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+							</li>
+							<li class="modal-menu__item">
+								<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+							</li>
+							<li class="modal-menu__item">
+								<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+							</li>
+							<li class="modal-menu__item">
+								<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+							</li>
+							<li class="modal-menu__item">
+								<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="header-nav-right">
+					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+						+7(495)107-77-88
+					</a>
+				</div>
+			</nav>
+			<div class="container header-content">
+				<h2 class="header-subtitle wow fadeInUp" data-wow-delay="0.6s">
+					КОТТЕДЖНЫЙ ПОСЕЛОК БИЗНЕС-КЛАССА
+				</h2>
+				<h1 class="header-title wow fadeInUp" data-wow-delay="0.6s">
 					LEVEL-HOUSE
+				</h1>
+				<a href="#maps" class="scrol-to header-btn btn-opacity wow fadeInUp" data-wow-delay="0.6s">
+					<img class="pc-true" src="img/arrow-bottom.png" alt="">
+					<img class="mob-true" src="img/arrow-bottom_white.png" alt="">
+					<span>ВЫБРАТЬ УЧАСТОК</span>
 				</a>
 			</div>
-			<div class="header-nav-right">
-				<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-					+7(495)107-77-88
-				</a>
-			</div>
-		</nav>
-		<div class="container header-content">
-			<h2 class="header-subtitle wow fadeInUp" data-wow-delay="0.6s">
-				КОТТЕДЖНЫЙ ПОСЕЛОК БИЗНЕС-КЛАССА
-			</h2>
-			<h1 class="header-title wow fadeInUp" data-wow-delay="0.6s">
-				LEVEL-HOUSE
-			</h1>
-			<a href="#maps" class="scrol-to header-btn btn-opacity wow fadeInUp" data-wow-delay="0.6s">
-				<img class="pc-true" src="img/arrow-bottom.png" alt="">
-				<img class="mob-true" src="img/arrow-bottom_white.png" alt="">
-				<span>ВЫБРАТЬ УЧАСТОК</span>
-			</a>
-		</div>
-	</header>
-	<section class="homes">
+	</div>
+	<div class="slider_item homes">
 		<div class="container">
 			<div class="homes-top">
-				<h2 class="homes-title wow fadeInLeft">
+				<h2 class="homes-title" data-animation="fadeInLeft" data-delay="0.3s">
 					КОМФОРТ <br>
 					ТЕПЛО <br>
 					ТЕХНОЛОГИИ
 				</h2>
-				<p class="homes-text wow fadeInRight">
+				<p class="homes-text" data-animation="fadeInRight" data-delay="0.3s">
 					В нашей архитектуре поселка, мы при- <br class="pc-true">
 					держиваемся единого стиля фасадов.
 					<br>
@@ -110,7 +130,7 @@
 					приусадебные участки живой изгородью.
 				</p>
 			</div>
-			<div class="homes-arrows wow fadeInUp">
+			<div class="homes-arrows" data-animation="fadeInUp" data-delay="0.3s">
 				<a class="homes-arrow homes-arrow__prev hms-arrow__prev">
 					<img src="img/arrows-left.png" alt="">
 				</a>
@@ -120,7 +140,7 @@
 			</div>		
 		</div>
 		<div class="homes-slider">
-			<div class="homes-slide wow fadeInUp">
+			<div class="homes-slide" data-animation="fadeInUp" data-delay="0.3s">
 				<img src="img/homes-slide.png" alt="" class="homes-slide-img">
 				<div class="homes-slide-bottom">
 					<div class="homes-slide-left">
@@ -147,7 +167,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="homes-slide wow fadeInUp">
+			<div class="homes-slide" data-animation="fadeInUp" data-delay="0.3s">
 				<img src="img/homes-slide.png" alt="" class="homes-slide-img">
 				<div class="homes-slide-bottom">
 					<div class="homes-slide-left">
@@ -174,7 +194,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="homes-slide wow fadeInUp">
+			<div class="homes-slide" data-animation="fadeInUp" data-delay="0.3s">
 				<img src="img/homes-slide.png" alt="" class="homes-slide-img">
 				<div class="homes-slide-bottom">
 					<div class="homes-slide-left">
@@ -201,7 +221,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="homes-slide wow fadeInUp">
+			<div class="homes-slide" data-animation="fadeInUp" data-delay="0.3s">
 				<img src="img/homes-slide.png" alt="" class="homes-slide-img">
 				<div class="homes-slide-bottom">
 					<div class="homes-slide-left">
@@ -229,12 +249,47 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<section class="slider_item contacts">
+		<img src="img/contact-bg.png" alt="" class="contacts-bg pc-true">
+		<img src="img/contacts-lien-mob (1).png" alt="" class="contacts-bg mob-true">
+		<img src="img/phone.png" alt="" class="contacts-phone" data-animation="fadeInLeft" data-delay="0.3s">
+		<div class="container">
+			<div class="contacts-content" data-animation="fadeInRight" data-delay="0.3s">
+				<h3 class="contacts-subtitle">
+					СВЯЖИТЕСЬ
+				</h3>
+				<h2 class="contacts-title">
+					С НАМИ
+				</h2>
+				<form action="" class="contacts-form">
+					<input type="text" class="contacts-form__input" placeholder="ВАШЕ ИМЯ">
+					<input type="text" class="contacts-form__input contacts-form__input_eml" placeholder="ВАШ E-MAIL">
+					<input type="text" class="contacts-form__input" placeholder="+7 (925)-11-11-111">
+					<button class="contacts-form__btn btn-opacity">
+						<img src="img/arrow-top.png" alt="">
+						<span>ОСТАВИТЬ ЗАЯВКУ</span>
+					</button>
+					<div class="contacts-bottom">
+						<div class="contacts-block">
+							<div class="contacts-block__inner"></div>
+						</div>
+						<p class="contacts-bottom__text">
+							Вы соглашаетесь с <br>
+							условиями обработки <br>
+							персональных данных  <br>
+							<a href="">(ознакомиться)</a>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
 	</section>
-	<section class="maps" id="maps">
-		<img src="img/map.png" alt="" class="maps-img pc-true">
+	<div class="slider_item maps" id="maps">
+		<img src="img/map.png" alt="" class="maps-img pc-true" data-animation="fadeIn" data-delay="0.3s">
 		<img src="img/map-mobile.png" alt="" class="maps-img mob-true">
 		<div class="container">
-			<div class="maps-content wow fadeInLeft">
+			<div class="maps-content" data-animation="fadeInLeft" data-delay="0.3s">
 				<a href="#" class="homes-btn__more homes-btn_panoram">
 					<img src="img/glaz.png" alt="">
 					ПАНОРАМА
@@ -303,26 +358,516 @@
 				</ul>
 			</div>
 		</div>
-	</section>
-	<section class="contacts">
-		<img src="img/contact-bg.png" alt="" class="contacts-bg pc-true">
-		<img src="img/contacts-lien-mob (1).png" alt="" class="contacts-bg mob-true">
-		<img src="img/phone.png" alt="" class="contacts-phone wow fadeInLeft">
+	</div>
+	<div class="slider_item slider-slide slider-slide-1 slider-slide-white">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+			<div class="header-nav-left">
+				<img src="img/menu-header.png" alt="" class="burger-button">
+				<a href="index.html" class="header-nav__text">
+					LEVEL-HOUSE
+				</a>
+				<div class="modal-menu">
+					<img src="img/close-modal.png" alt="" class="modal-menu__img">
+					<ul class="modal-menu__list">
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-nav-right">
+				<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+					+7(495)107-77-88
+				</a>
+			</div>
+		</div>
 		<div class="container">
-			<div class="contacts-content wow fadeInRight">
-				<h3 class="contacts-subtitle">
-					СВЯЖИТЕСЬ
-				</h3>
-				<h2 class="contacts-title">
-					С НАМИ
-				</h2>
+			<h2 class="slider-slide__title" data-animation="fadeInUp" data-delay="0.3s">
+				ПРИРОДНЫЙ <br>
+				ЗАПОВЕДНИК
+			</h2>
+		</div>
+		<div class="slider-slide-text" data-animation="fadeInUp" data-delay="0.3s">
+			Единственный заповедник Московской области — это <br>
+			островок дикой природы вблизи густонаселенного <br>
+			мегаполиса. Здесь можно увидеть уникальные для <br>
+			Подмосковья растения и получить незабываемые <br>
+			впечатления от встречи с дикими зверями в лесу.
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-2">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				 ТРИ ОЗЕРА
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				В ПЕШЕЙ ДОСТУПНОСТИ ОТ ВАШЕГО ДОМА
+			</h3>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-3 slider-slide-white">
+		<nav class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+			<div class="header-nav-left">
+				<img src="img/menu-header.png" alt="" class="burger-button">
+				<a href="index.html" class="header-nav__text">
+					LEVEL-HOUSE
+				</a>
+				<div class="modal-menu">
+					<img src="img/close-modal.png" alt="" class="modal-menu__img">
+					<ul class="modal-menu__list">
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+						</li>
+						<li class="modal-menu__item">
+							<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-nav-right">
+				<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+					+7(495)107-77-88
+				</a>
+			</div>
+		</nav>
+		<div class="container">
+			<h2 class="slider-slide__title" style="opacity: 0">
+				СЧАСТЛИВОЕ
+			</h2>
+			<h3 class="slider-slide__subtitle" style="opacity: 0">
+				ДЕТСТВО
+			</h3>
+			<a href="#maps" class="scrol-to header-btn btn-opacity wow fadeInUp" data-wow-delay="0.6s">
+				<img src="img/home.png" alt="">
+				<span>ВЫБРАТЬ УЧАСТОК</span>
+			</a>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-4">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				ОХРАНА
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				ПО ВСЕМУ ПЕРИМЕТРУ ПОСЕЛКА
+			</h3>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-5">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				ПРОПУСКТНОЙ ПУНКТ И ГОСТЕВОЙ ПАРКИНГ
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				КПП
+			</h3>
+			<div class="slider-slide-text">
+				Проезд на территорию поселка, строго контролируется. <br>
+				Также вы не будете наблюдать хаотичную парковку <br>
+				автомобилей. Мы продумали каждую деталь <br>
+				— удобный гостевой паркинг в распоряжении вас и <br>
+				ваших гостей.
+			</div>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-6 slider-slide-white">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				 АЭРОДРОМ «НОВИНКИ»
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				Получите незабываемые эмоции от летных экскурсий в нашем аэродроме. <br>
+				А ценители авиатехники могут совершить прыжок с парашютом <br>
+				или посидеть в клубном кафе.
+			</h3>
+			
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-7 slider-slide-white">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				ХВОЙНЫЙ ЛЕС
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				ПЛОЩАДЬЮ БОЛЕЕ 15 КИЛОМЕТРОВ
+			</h3>
+			<div class="slider-slide-text">
+				Посёлок расположен у истока  Приокско — Терасного <br>
+				заповедника прославившимся своим неповторимым <br>
+				хвойным лесом. Среди природы и чистейшего воздуха <br>
+				мы решили построить наш общий дом.
+			</div>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-8">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				ПАРК
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				Здесь есть все для комфортного времяпровождения: оснащенные современной <br>
+				техникой коттеджи с зоной для барбекю, спортплощадки для футбола, баскет- <br>
+				бола, тенниса и хоккея, пейнтбольный клуб, русская баня.
+			</h3>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-9">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title">
+				ФЕРМЕРСКИЕ
+			</h2>
+			<h3 class="slider-slide__subtitle">
+				ПРОДУКТЫ
+			</h3>
+			<div class="slider-slide-text">
+				На территории поселка, расположен рынок с <br>
+				экологически чистыми продуктами из ближайших <br>
+				фермерских хозяйств.
+			</div>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-10">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<h2 class="slider-slide__title mob-true">
+				СПОРТ
+			</h2>
+			<p class="slider-slide__text mob-true">
+				Здесь есть все для комфортного время- <br>
+				провождения: оснащенные современной <br>
+				техникой коттеджи с зоной для барбекю, <br>
+				спортплощадки для футбола, баскетбола,
+			</p>
+		</div>
+	</div>
+	<div class="slider_item slider-slide slider-slide-11 slider-slide-white">
+		<img src="img/catalog-img (1).png" alt="" class="slider-slide-11-img">
+		<div class="header-nav" data-animation="fadeInUp" data-delay="0.3s">
+					<div class="header-nav-left">
+						<img src="img/menu-header.png" alt="" class="burger-button">
+						<a href="index.html" class="header-nav__text">
+							LEVEL-HOUSE
+						</a>
+						<div class="modal-menu">
+							<img src="img/close-modal.png" alt="" class="modal-menu__img">
+							<ul class="modal-menu__list">
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_1">ГЛАВНАЯ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_2">НАШИ ПРОЕКТЫ</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_3">ВЫБРАТЬ УЧАСТОК  </a>                                      
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_4">РАССРОЧКА</a>
+								</li>
+								<li class="modal-menu__item">
+									<a href="#" class="modal-menu__item_5">КОНТАКТЫ</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="header-nav-right">
+						<a href="tel:+7(495)107-77-88" class="header-nav-phone">
+							+7(495)107-77-88
+						</a>
+					</div>
+				</div>
+		<div class="container">
+			<div class="slide-lft">
 				<form action="" class="contacts-form">
 					<input type="text" class="contacts-form__input" placeholder="ВАШЕ ИМЯ">
 					<input type="text" class="contacts-form__input" placeholder="ВАШ E-MAIL">
 					<input type="text" class="contacts-form__input" placeholder="+7 (925)-11-11-111">
 					<button class="contacts-form__btn btn-opacity">
 						<img src="img/arrow-top.png" alt="">
-						<span>ОСТАВИТЬ ЗАЯВКУ</span>
+						<span>СКАЧАТЬ КАТАЛОГ</span>
 					</button>
 					<div class="contacts-bottom">
 						<div class="contacts-block">
@@ -337,381 +882,93 @@
 					</div>
 				</form>
 			</div>
-		</div>
-	</section>
-	<section class="slider" id="scroll-to2">
-		<div class="slider-slide slider-slide-1 slider-slide-white">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					ПРИРОДНЫЙ <br>
-					ЗАПОВЕДНИК
+			<div class="slide-right">
+				<h2 class="slide-right__subtitle">
+					СКАЧАЙТЕ
 				</h2>
-			</div>
-			<div class="slider-slide-text">
-				Единственный заповедник Московской области — это <br>
-				островок дикой природы вблизи густонаселенного <br>
-				мегаполиса. Здесь можно увидеть уникальные для <br>
-				Подмосковья растения и получить незабываемые <br>
-				впечатления от встречи с дикими зверями в лесу.
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-2">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					 ТРИ ОЗЕРА
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					В ПЕШЕЙ ДОСТУПНОСТИ ОТ ВАШЕГО ДОМА
+				<h3 class="slide-right__title">
+					КАТАЛОГ
 				</h3>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-3 slider-slide-white">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-wh.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title" style="opacity: 0">
-					СЧАСТЛИВОЕ
-				</h2>
-				<h3 class="slider-slide__subtitle" style="opacity: 0">
-					ДЕТСТВО
-				</h3>
-				<a href="#maps" class="scrol-to header-btn btn-opacity wow fadeInUp" data-wow-delay="0.6s">
-					<img src="img/home.png" alt="">
-					<span>ВЫБРАТЬ УЧАСТОК</span>
-				</a>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-4">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					ОХРАНА
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					ПО ВСЕМУ ПЕРИМЕТРУ ПОСЕЛКА
-				</h3>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-5">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					ПРОПУСКТНОЙ ПУНКТ И ГОСТЕВОЙ ПАРКИНГ
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					КПП
-				</h3>
-				<div class="slider-slide-text">
-					Проезд на территорию поселка, строго контролируется. <br>
-					Также вы не будете наблюдать хаотичную парковку <br>
-					автомобилей. Мы продумали каждую деталь <br>
-					— удобный гостевой паркинг в распоряжении вас и <br>
-					ваших гостей.
-				</div>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-6 slider-slide-white">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					 АЭРОДРОМ «НОВИНКИ»
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					Получите незабываемые эмоции от летных экскурсий в нашем аэродроме. <br>
-					А ценители авиатехники могут совершить прыжок с парашютом <br>
-					или посидеть в клубном кафе.
-				</h3>
+				<p class="slide-right__text">
+					Все участки расположены в  уникальном коттеджном <br>
+					посёлке экологически чистого места Подмосковья, <br>
+					среди хвойных деревьев и озер
+				</p>
 				
 			</div>
 		</div>
-		<div class="slider-slide slider-slide-7 slider-slide-white">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
+	</div>
+	<section class="banking slider_item">
+		<div class="container">
+			<h2 class="banking-title" data-animation="fadeInUp" data-delay="0.3s">
+				БАНКИ ПАРТНЕРЫ
+			</h2>
+			<h3 class="banking-subtitle" data-animation="fadeInUp" data-delay="0.3s">
+				ДАЕМ КРЕДИТ ПО ВЫГОДНЫМ ПРОЦЕНТАМ
+			</h3>
+			<div class="banking-row">
+				<div class="banking-block banking-block_1" data-animation="fadeInUp" data-delay="0.3s">
+					<img src="img/bank-1.png" alt="" class="banking-img">
+					<div class="banking-block__text">
+						<span>от</span>
+						8,00%
+					</div>
+					<span class="banking-block__text_bottom">
+						МИНИМАЛЬНАЯ СТАВКА ПО КРЕДИТУ
+					</span>
 				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
+				<div class="banking-block banking-block_2" data-animation="fadeInUp" data-delay="0.6s">
+					<img src="img/bank-2.png" alt="" class="banking-img">
+					<div class="banking-block__text">
+						<span>от</span>
+						8,00%
+					</div>
+					<span class="banking-block__text_bottom">
+						МИНИМАЛЬНАЯ СТАВКА ПО КРЕДИТУ
+					</span>
 				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					ХВОЙНЫЙ ЛЕС
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					ПЛОЩАДЬЮ БОЛЕЕ 15 КИЛОМЕТРОВ
-				</h3>
-				<div class="slider-slide-text">
-					Посёлок расположен у истока  Приокско — Терасного <br>
-					заповедника прославившимся своим неповторимым <br>
-					хвойным лесом. Среди природы и чистейшего воздуха <br>
-					мы решили построить наш общий дом.
-				</div>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-8">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					ПАРК
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					Здесь есть все для комфортного времяпровождения: оснащенные современной <br>
-					техникой коттеджи с зоной для барбекю, спортплощадки для футбола, баскет- <br>
-					бола, тенниса и хоккея, пейнтбольный клуб, русская баня.
-				</h3>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-9">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title">
-					ФЕРМЕРСКИЕ
-				</h2>
-				<h3 class="slider-slide__subtitle">
-					ПРОДУКТЫ
-				</h3>
-				<div class="slider-slide-text">
-					На территории поселка, расположен рынок с <br>
-					экологически чистыми продуктами из ближайших <br>
-					фермерских хозяйств.
-				</div>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-10">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<h2 class="slider-slide__title mob-true">
-					СПОРТ
-				</h2>
-				<p class="slider-slide__text mob-true">
-					Здесь есть все для комфортного время- <br>
-					провождения: оснащенные современной <br>
-					техникой коттеджи с зоной для барбекю, <br>
-					спортплощадки для футбола, баскетбола,
-				</p>
-			</div>
-		</div>
-		<div class="slider-slide slider-slide-11 slider-slide-white">
-			<img src="img/catalog-img (1).png" alt="" class="slider-slide-11-img">
-			<div class="header-nav wow fadeInUp" data-wow-delay="0.6s">
-				<div class="header-nav-left">
-					<img src="img/menu-header.png" alt="">
-					<a href="index.html" class="header-nav__text">
-						LEVEL-HOUSE
-					</a>
-				</div>
-				<div class="header-nav-right">
-					<a href="tel:+7(495)107-77-88" class="header-nav-phone">
-						+7(495)107-77-88
-					</a>
-				</div>
-			</div>
-			<div class="container">
-				<div class="slide-lft">
-					<form action="" class="contacts-form">
-						<input type="text" class="contacts-form__input" placeholder="ВАШЕ ИМЯ">
-						<input type="text" class="contacts-form__input" placeholder="ВАШ E-MAIL">
-						<input type="text" class="contacts-form__input" placeholder="+7 (925)-11-11-111">
-						<button class="contacts-form__btn btn-opacity">
-							<img src="img/arrow-top.png" alt="">
-							<span>СКАЧАТЬ КАТАЛОГ</span>
-						</button>
-						<div class="contacts-bottom">
-							<div class="contacts-block">
-								<div class="contacts-block__inner"></div>
-							</div>
-							<p class="contacts-bottom__text">
-								Вы соглашаетесь с <br>
-								условиями обработки <br>
-								персональных данных  <br>
-								<a href="">(ознакомиться)</a>
-							</p>
-						</div>
-					</form>
-				</div>
-				<div class="slide-right">
-					<h2 class="slide-right__subtitle">
-						СКАЧАЙТЕ
-					</h2>
-					<h3 class="slide-right__title">
-						КАТАЛОГ
-					</h3>
-					<p class="slide-right__text">
-						Все участки расположены в  уникальном коттеджном <br>
-						посёлке экологически чистого места Подмосковья, <br>
-						среди хвойных деревьев и озер
-					</p>
-					
+				<div class="banking-block banking-block_3" data-animation="fadeInUp" data-delay="0.9s">
+					<img src="img/bank-3.png" alt="" class="banking-img">
+					<div class="banking-block__text">
+						<span>от</span>
+						8,00%
+					</div>
+					<span class="banking-block__text_bottom">
+						МИНИМАЛЬНАЯ СТАВКА ПО КРЕДИТУ
+					</span>
 				</div>
 			</div>
 		</div>
 	</section>
-</div>
-<section class="banking">
-	<div class="container">
-		<h2 class="banking-title wow fadeInUp">
-			БАНКИ ПАРТНЕРЫ
-		</h2>
-		<h3 class="banking-subtitle wow fadeInUp">
-			ДАЕМ КРЕДИТ ПО ВЫГОДНЫМ ПРОЦЕНТАМ
-		</h3>
-		<div class="banking-row">
-			<div class="banking-block banking-block_1 wow fadeInUp" data-wow-delay="0.3s">
-				<img src="img/bank-1.png" alt="" class="banking-img">
-				<div class="banking-block__text">
-					<span>от</span>
-					8,00%
-				</div>
-				<span class="banking-block__text_bottom">
-					МИНИМАЛЬНАЯ СТАВКА ПО КРЕДИТУ
-				</span>
-			</div>
-			<div class="banking-block banking-block_2 wow fadeInUp" data-wow-delay="0.6s">
-				<img src="img/bank-2.png" alt="" class="banking-img">
-				<div class="banking-block__text">
-					<span>от</span>
-					8,00%
-				</div>
-				<span class="banking-block__text_bottom">
-					МИНИМАЛЬНАЯ СТАВКА ПО КРЕДИТУ
-				</span>
-			</div>
-			<div class="banking-block banking-block_3 wow fadeInUp" data-wow-delay="0.9s">
-				<img src="img/bank-3.png" alt="" class="banking-img">
-				<div class="banking-block__text">
-					<span>от</span>
-					8,00%
-				</div>
-				<span class="banking-block__text_bottom">
-					МИНИМАЛЬНАЯ СТАВКА ПО КРЕДИТУ
-				</span>
+	<section class="adress slider_item">
+		<div class="container">
+			<h2 class="banking-title" data-animation="fadeInUp" data-delay="0.3s">
+				ГДЕ МЫ НАХОДИМСЯ
+			</h2>
+			<div class="adress-block" data-animation="fadeInUp" data-delay="0.3s">
+				<img class="pc-true" src="img/google-map.png" alt="">
+				<img class="mob-true" src="img/google-map-mobile (1).png" alt="">
 			</div>
 		</div>
-	</div>
-</section>
-<section class="adress">
-	<div class="container">
-		<h2 class="banking-title wow fadeInUp">
-			ГДЕ МЫ НАХОДИМСЯ
-		</h2>
-		<div class="adress-block">
-			<img class="pc-true" src="img/google-map.png" alt="">
-			<img class="mob-true" src="img/google-map-mobile (1).png" alt="">
-			<div class="adress-block__inner wow fadeInUp">
+	</section>
+	<footer class="footer slider_item">
+		<div class="container">
+			<div class="footer-left" data-animation="fadeInLeft" data-delay="0.3s">
+				<div class="footer-line"></div>
+				<div class="footer-soc">
+					<a href="#" class="footer-soc__item footer-soc__item_1">
+						<img src="img/soc-1.png" alt="">
+					</a>
+					<a href="#" class="footer-soc__item footer-soc__item_2">
+						<img src="img/soc-2.png" alt="">
+					</a>
+					<a href="#" class="footer-soc__item footer-soc__item_3">
+						<img src="img/soc-3.png" alt="">
+					</a>
+				</div>
+			</div>
+			<img src="img/phone-bottom.png" alt="" class="footer-phone">
+			<div class="adress-block__inner" data-animation="fadeInUp" data-delay="0.3s">
 				<p class="adress-block__text">
 					Московская обл., д. Новинки Бегичево, 142200 <br>
 					<span>Координаты места: Широта: 54.981   Долгота: 37.649</span>
@@ -728,74 +985,54 @@
 					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-</section>
-<footer class="footer">
-	<div class="container">
-		<div class="footer-left wow fadeInLeft">
-			<div class="footer-line"></div>
-			<div class="footer-soc">
-				<a href="#" class="footer-soc__item footer-soc__item_1">
-					<img src="img/soc-1.png" alt="">
-				</a>
-				<a href="#" class="footer-soc__item footer-soc__item_2">
-					<img src="img/soc-2.png" alt="">
-				</a>
-				<a href="#" class="footer-soc__item footer-soc__item_3">
-					<img src="img/soc-3.png" alt="">
-				</a>
+			<div class="footer-top">
+				<h2 class="banking-title" data-animation="fadeInUp" data-delay="0.3s">
+					КОНТАКТЫ
+				</h2>
+				<p class="footer-text" data-animation="fadeInUp" data-delay="0.3s">
+					Адрес офиса: БЦ «Гранд Сетунь Плаза» <br>
+					Горбунова yлица, д. 2 стр. 3, Москва, 121596
+				</p>
+			</div>
+			<div class="footer-center" data-animation="fadeInRight" data-delay="0.3s">
+				<div class="footer-block-wrapper footer-block-wrapper_1">
+					<a href="8 (495) 107-77-88" class="footer-block">
+						<span class="footer-block__number">1</span>
+						<img src="img/telephone.png" alt="">
+						8 (495) 107-77-88
+					</a>
+					<a href="#" class="footer-block__link">
+						Конфиденциальность
+					</a>
+				</div>
+				<div class="footer-block-wrapper footer-block-wrapper_2">
+					<a href="tel:+7 (977) 105 77 88" class="footer-block">
+						<span class="footer-block__number">2</span>
+						<img src="img/telephone.png" alt="">
+						+7 (977) 105 77 88
+					</a>
+					<a href="#" class="footer-block__link">
+						Все права защищены
+					</a>
+				</div>
+				<div class="footer-block-wrapper footer-block-wrapper_3">
+					<a href="tel:8 (495) 107-77-88" class="footer-block">
+						<span class="footer-block__number">3</span>
+						<img src="img/telephone.png" alt="">
+						8 (495) 107-77-88
+					</a>
+					<a href="#" class="footer-block__link footer-block__link_mail">
+						info@level-house.com
+					</a>
+				</div>
 			</div>
 		</div>
-		<img src="img/phone-bottom.png" alt="" class="footer-phone">
-		<div class="footer-top">
-			<h2 class="banking-title wow fadeInUp">
-				КОНТАКТЫ
-			</h2>
-			<p class="footer-text wow fadeInUp">
-				Адрес офиса: БЦ «Гранд Сетунь Плаза» <br>
-				Горбунова yлица, д. 2 стр. 3, Москва, 121596
-			</p>
-		</div>
-		<div class="footer-center wow fadeInRight">
-			<div class="footer-block-wrapper footer-block-wrapper_1">
-				<a href="8 (495) 107-77-88" class="footer-block">
-					<span class="footer-block__number">1</span>
-					<img src="img/telephone.png" alt="">
-					8 (495) 107-77-88
-				</a>
-				<a href="#" class="footer-block__link">
-					Конфиденциальность
-				</a>
-			</div>
-			<div class="footer-block-wrapper footer-block-wrapper_2">
-				<a href="tel:+7 (977) 105 77 88" class="footer-block">
-					<span class="footer-block__number">2</span>
-					<img src="img/telephone.png" alt="">
-					+7 (977) 105 77 88
-				</a>
-				<a href="#" class="footer-block__link">
-					Все права защищены
-				</a>
-			</div>
-			<div class="footer-block-wrapper footer-block-wrapper_3">
-				<a href="tel:8 (495) 107-77-88" class="footer-block">
-					<span class="footer-block__number">3</span>
-					<img src="img/telephone.png" alt="">
-					8 (495) 107-77-88
-				</a>
-				<a href="#" class="footer-block__link footer-block__link_mail">
-					info@level-house.com
-				</a>
-			</div>
-		</div>
-	</div>
-</footer>
+	</footer>
+</div>
 <!-- libs js -->
 <script src="js/libs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.0.2/dist/simpleParallax.min.js"></script>
-<script src="libs/lib/wheel-indicator.js"></script>
-<script src="libs/imakewebthings-waypoints-34d9f6d/lib/jquery.waypoints.min.js"></script>
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <script src="js/common.js"></script>
 </body>
 
