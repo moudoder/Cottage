@@ -31,13 +31,12 @@ $(document).ready(function () {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    swipe: true,
+    swipe: false,
     arrows: true,
     centerMode:true,
     variableWidth: true,
     prevArrow: $('.hms-arrow__prev'),
     nextArrow: $('.hms-arrow__next'),
-    focusOnSelect: true
    });
   $('.slider-page').slick({
     infinite: false,
