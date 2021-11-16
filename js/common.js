@@ -54,7 +54,8 @@ $(document).ready(function () {
         {
           breakpoint: 720,
           settings: {
-            
+            swipe: true,
+            verticalSwiping: true,
           }
         }
       ]
