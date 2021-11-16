@@ -24,20 +24,52 @@ $(document).ready(function () {
   });
 
 
+  $('.homes-btn__more_1').on("click", function () {
+    $('.dark-window').addClass('dark-window-active');
+    $('.modal-window__1').addClass('modal-window-active');
+    return false;
+  });
+  $('.homes-btn__more_2').on("click", function () {
+    $('.dark-window').addClass('dark-window-active');
+    $('.modal-window__2').addClass('modal-window-active');
+    return false;
+  });
+  $('.homes-btn__more_3').on("click", function () {
+    $('.dark-window').addClass('dark-window-active');
+    $('.modal-window__3').addClass('modal-window-active');
+    return false;
+  });
+  $('.modal-window_close').on("click", function () {
+    $('.dark-window').removeClass('dark-window-active');
+    $('.modal-window').removeClass('modal-window-active');
+  });
+  $('.dark-window').on("click", function () {
+    $('.dark-window').removeClass('dark-window-active');
+    $('.modal-window').removeClass('modal-window-active');
+  });
+
+  var owl = $('.homes-slider');
+  owl.owlCarousel({
+    autoWidth:true,
+    loop:true,
+    center:true,
+    transitionStyle : "fade",
+    smartSpeed: 1000,
+    dragEndSpeed: 1000,
+  });
+  // Go to the next item
+  $('.hms-arrow__next').click(function() {
+      owl.trigger('next.owl.carousel');
+  })
+  // Go to the previous item
+  $('.hms-arrow__prev').click(function() {
+      // With optional speed parameter
+      // Parameters has to be in square bracket '[]'
+      owl.trigger('prev.owl.carousel', [300]);
+  })
+ 
   
 
-
-  $('.homes-slider').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipe: false,
-    arrows: true,
-    centerMode:true,
-    variableWidth: true,
-    prevArrow: $('.hms-arrow__prev'),
-    nextArrow: $('.hms-arrow__next'),
-   });
   $('.slider-page').slick({
     infinite: false,
     slidesToShow: 1,
@@ -69,7 +101,7 @@ $(document).ready(function () {
     return false;
   })
   $('.modal-menu__item_3').on('click', function() {
-    $('.slider-page').slick('slickGoTo', 3);
+    $('.slider-page').slick('slickGoTo', 2);
     return false;
   })
   $('.modal-menu__item_4').on('click', function() {
@@ -140,9 +172,7 @@ $(document).ready(function () {
   })
 
 
-  $('.slider').on('afterChange', function (event, currentSlide) {
-       
-    });
+  
 
   let mous_dwn_counter = 0;
   setInterval(function(){ 
