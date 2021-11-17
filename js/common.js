@@ -3,14 +3,10 @@ $(document).ready(function () {
   
   
 
-  $('.burger-button').on('click', function() {
-    let parent_burger = $(this).parent('.header-nav-left');
-    $(parent_burger).addClass('header-nav-active');
-  })
+  
   $('.modal-menu__img').on('click', function() {
-    let parent_burger = $(this).parent('.modal-menu');
-    parent_burger = $(parent_burger).parent('.header-nav-left');
-    $(parent_burger).removeClass('header-nav-active');
+    let parent_burger = $(this).parent('.header-nav-left');
+    $(parent_burger).toggleClass('header-nav-active');
   })
 
   
