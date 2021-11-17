@@ -4,6 +4,7 @@ $(document).ready(function () {
   
 
   
+
   $('.modal-menu__img').on('click', function() {
     let parent_burger = $(this).parent('.header-nav-left');
     $(parent_burger).toggleClass('header-nav-active');
