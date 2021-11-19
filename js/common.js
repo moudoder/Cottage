@@ -1,8 +1,9 @@
 $(document).ready(function () {
   new WOW().init();
-  
-  
-  $()
+  let wdth_body = window.innerHeight;
+  $(".slider_item").attr('style', 'height: ' + wdth_body +'px !important;')
+
+
   if ($(window).width() < 720) {
     $('.burger-button').on('click', function() {
       $('.modal-menu__mobile').addClass('modal-menu__mobile-active');
@@ -74,7 +75,13 @@ $(document).ready(function () {
       owl.trigger('prev.owl.carousel', [300]);
   })
  
-  
+  if ($(window).width() < 1025 && $(window).width() > 761) {
+     $('.banking, .adress').wrapAll('<div class="slider_item slider_item__wrap">');
+
+     $('.header, .homes').wrapAll('<div class="slider_item slider_item__hdr">');
+
+     $('.maps, .contacts').wrapAll('<div class="slider_item slider_item__wrap2">');
+  }
 
   $('.slider-page').slick({
     infinite: false,
