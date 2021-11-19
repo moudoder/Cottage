@@ -2,6 +2,7 @@ $(document).ready(function () {
   new WOW().init();
   let wdth_body = window.innerHeight;
   $(".slider_item").attr('style', 'height: ' + wdth_body +'px !important;')
+  $(".maps .maps-img").attr('style', 'height: ' + wdth_body +'px !important;')
 
 
   if ($(window).width() < 720) {
