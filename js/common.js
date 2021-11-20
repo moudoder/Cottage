@@ -159,15 +159,29 @@ $(document).ready(function () {
     });
   }
 
-  $('.modal-window-slider').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    swipe: true,
-    arrows: true,
-    prevArrow: $('.modal__arrow_prev'),
-    nextArrow: $('.modal__arrow_next'),
-   });
+  let services = $('.modal-window-slider');
+  for (var i = services.length - 1; i >= 0; i--) {
+    let par_ser = $(services[i]).parent('.modal-window');
+    par_ser = $(par_ser).children('.modal-wrapper');
+    par_ser = $(par_ser).children('.homes-arrows');
+
+    
+    let arrow_r = $(par_ser).children('.modal__arrow_prev')
+    let arrow_l = $(par_ser).children('.modal__arrow_next')
+    console.log(par_ser)
+    $(services[i]).slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      swipe: true,
+      arrows: true,
+      prevArrow: arrow_r,
+      nextArrow: arrow_l,
+     });
+  }
+
+
+  
   $('.modal-window-subslider').slick({
     infinite: false,
     slidesToShow: 4,
