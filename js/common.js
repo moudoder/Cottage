@@ -113,7 +113,7 @@ $(document).ready(function () {
   $('.hms-arrow__prev').click(function() {
       // With optional speed parameter
       // Parameters has to be in square bracket '[]'
-      owl.trigger('prev.owl.carousel', [300]);
+      owl.trigger('prev.owl.carousel');
   })
  
   if ($(window).width() < 1025 && $(window).width() > 761) {
