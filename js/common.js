@@ -2,6 +2,8 @@ $(document).ready(function () {
   new WOW().init();
   let wdth_body = window.innerHeight;
 
+  $(".phone").mask("+7 (999) 999-9999");
+
   jQuery(function($){
     $(document).mouseup(function (e){ // событие клика по веб-документу
       let div = $(".menu-left"); // тут указываем ID элемента
@@ -26,7 +28,7 @@ $(document).ready(function () {
     $(".slider_item").attr('style', 'height: ' + wdth_body +'px !important;')
     $(".maps .maps-img").attr('style', 'height: ' + wdth_body +'px !important;')
     
-    
+    $('.slider-slide-text').attr('data-delay', '0.3s');
 
 
   }
@@ -119,7 +121,7 @@ $(document).ready(function () {
 
      $('.header, .homes').wrapAll('<div class="slider_item slider_item__hdr">');
 
-     $('.maps, .contacts').wrapAll('<div class="slider_item slider_item__wrap2">');
+     $('#maps, .contacts').wrapAll('<div class="slider_item slider_item__wrap2">');
   }
 
   $('.slider-page').slick({
@@ -135,7 +137,7 @@ $(document).ready(function () {
     cssEase: 'ease',
     responsive: [
         {
-          breakpoint: 720,
+          breakpoint: 1025,
           settings: {
             swipe: true,
             verticalSwiping: true,
@@ -155,7 +157,7 @@ $(document).ready(function () {
     $('.menu-left').removeClass('menu-left-active');
     return false;
   })
-  
+
   $('.modal-menu__item_2').on('click', function() {
     $('.slider-page').slick('slickGoTo', 1);
     $('.menu-left').removeClass('menu-left-active');
